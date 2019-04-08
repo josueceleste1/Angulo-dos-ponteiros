@@ -16,17 +16,17 @@ class RetornaAnguloRelogio {
 			 this.setHora(this.getHora() - 12);
 		}
 		/*
-		 * Como eu sei que um circulo tem 360 graus e um relogio tem 12 horas, e sÛ fazer 360/12 = 30
-		 * esse 30 eu multiplico pela quantidade de horas 30*hora que eu vou ter o ‚ngulo do ponteiro das horas.
-		 *  Para o ponteiro dos minutos, como eu sei que um minuto tem 60 segundos ent„o 360/60 = 6, agora e sÛ 
-		 * multiplicar pela quantidade de minutos passado 6*minuto e o ‚ngulo entre os ponteiros e dado pela diferenÁa
-		 * entre o ‚ngulo das horas e dos minutos.
+		 * Como eu sei que um circulo tem 360 graus e um relogio tem 12 horas, e s√≥ fazer 360/12 = 30
+		 * esse 30 eu multiplico pela quantidade de horas 30*hora que eu vou ter o √¢ngulo do ponteiro das horas.
+		 *  Para o ponteiro dos minutos, como eu sei que um minuto tem 60 segundos ent√£o 360/60 = 6, agora e s√≥ 
+		 * multiplicar pela quantidade de minutos passado 6*minuto e o √¢ngulo entre os ponteiros e dado pela diferen√ßa
+		 * entre o √¢ngulo das horas e dos minutos.
 		 * */
 		
-		 this.angH = 30*this.getHora() + (this.getMinuto()/60)*30;  
+		 this.angH = 30*this.getHora();  
 		 this.angM = 6*this.getMinuto();
 		 
-		 if(this.angH > angM) {// Esse if e para garantir que n„o haver· ‚ngulo negativo.
+		 if(this.angH > angM) {// Esse if e para garantir que n√£o haver√° √¢ngulo negativo.
 			return this.angH - this.angM; 
 		 }else {
 			return this.angM - this.angH; 
@@ -55,9 +55,9 @@ class RetornaAnguloRelogio {
 public class Angulo_ponteiros {
 	/*
 	 * Duvida:
-	 *   	Minha duvida foi sobre o enunciado do problema, pois 00:15h nunca poder· dar 45 graus 
+	 *   	Minha duvida foi sobre o enunciado do problema, pois 00:15h nunca poder√° dar 45 graus 
 	 * mesmo se eu considerar o tempo que leva para o ponteiro das horas mudar de uma hora para outra.
-	 * 		Ent„o eu escolhi deixar parecido com o exemplo mostrado na premissa. Assim fica:
+	 * 		Ent√£o eu escolhi deixar parecido com o exemplo mostrado na premissa. Assim fica:
 	 *  	- 00:00h possui um angulo de 0
 	 *  	- 00:15h possui um angulo de 90
 	 *  	- 00:30h possui um angulo de 180
@@ -69,7 +69,7 @@ public class Angulo_ponteiros {
 		
 		long angulo = ang.retornaAnguloRelogio(horario);
 		
-		System.out.println(ang.getHora()+":"+ang.getMinuto()+"h possiu um ‚ngulo de "+angulo);
+		System.out.println(ang.getHora()+":"+ang.getMinuto()+"h possiu um √¢ngulo de "+angulo);
 	}
 
 }
